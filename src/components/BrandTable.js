@@ -54,7 +54,196 @@ function BrandTable() {
         "cnt": "UK",
         "prt": ['Diet. Supps','Perf. Supps'],
         "cat": ['None']
-    }
+    },{
+      "bnd": "Aguulp",
+      "url": "https://www.aguulp.com/shop/",
+      "cnt": "UK",
+      "prt": ['Diet. Supps','Perf. Supps'],
+      "cat": ['None']
+  },{
+    "bnd": "Aguulp",
+    "url": "https://www.aguulp.com/shop/",
+    "cnt": "UK",
+    "prt": ['Diet. Supps','Perf. Supps'],
+    "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},
+{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},
+{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+},{
+  "bnd": "Aguulp",
+  "url": "https://www.aguulp.com/shop/",
+  "cnt": "UK",
+  "prt": ['Diet. Supps','Perf. Supps'],
+  "cat": ['None']
+}
+
 
 ]
 
@@ -80,7 +269,7 @@ newFilters[field] = newFilters[field].filter(d=>d)
   }
 
   const history = useHistory()
-  const locatio = useLocation()
+  const location = useLocation()
 const searchHandler = (searchString) =>
 {
   let newFilters = {...filters} 

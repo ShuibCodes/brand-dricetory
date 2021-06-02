@@ -3,6 +3,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import { makeStyles } from "@material-ui/core/styles";
+import { Waypoint } from 'react-waypoint';
 import '../../src/App.css'
 
 
@@ -15,43 +16,20 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
+
+
 export default function TableContent(props) {
 
   const classes = useStyles();  
 
 
-const [rowLimit, setRowLimit] = useState()
+const [limit, changeLimit] = useState(12);
 
-const [changeRowLimit, setChangeRowLimit] = useState()
-
-const filteredData = (data,filters) => {
-const filterKeys = Object.keys(filters).filter(d=>d !== 'search')
-console.log(filters[filterKeys[0]])
-  let newData = []
-for (let i=0; i<data.length; i++)
-{
-  let mismatch = 0;
-  for (let j=0; j<filterKeys.length; j++)
-  {
-    console.log(filters[filterKeys[j]])
-    if(mismatch > 0)  {continue}
-    if(filters[filterKeys[j]].length===0){continue}
-  if(Array.isArray(data[i][filterKeys[j]]))
-  { 
-  //overlapping array
-  console.log(filters[filterKeys[j]].filter(value => data[i][filterKeys[j]]?.includes(value)))
-  if(filters[filterKeys[j]].filter(value => data[i][filterKeys[j]]?.includes(value)).length === 0){mismatch++}
+  const limitHandler = (newlimit) => {
+    if(newlimit > limit)
+   changeLimit(newlimit)
   }
-  else
-  {if(filters[filterKeys[j]].indexOf(data[i][filterKeys[j]]) === -1){mismatch++}}
-  }
-  if(mismatch === 0){newData.push(data[i])}
-}
-console.log(newData)
-
-return newData.filter(d=>d.bnd.toLowerCase().match(filters.search.toLowerCase()))
-}
-
 console.log([props.API_DATA,props.filters])
 
     return (
@@ -59,18 +37,20 @@ console.log([props.API_DATA,props.filters])
 
         
         <TableBody >
-          {filteredData(props.API_DATA,props.filters).map(row => (
-           
-            <TableRow  key={row.name}>
-            
-            <TableCell style={{ textAlign:"left"}}   align="center">{row.bnd}</TableCell> 
-              <TableCell style={{ textAlign:"left"}}   align="center">{row.bnd}</TableCell> 
-              <TableCell style={{ textAlign:"left"}}  align="center">{row.cnt}</TableCell>
-              <TableCell style={{ textAlign:"left"}}  align="center">{row.prt.map((e) => <span style={{padding: "5px"}} key={e} >{`${e + ','}`}</span>)}</TableCell>
-              <TableCell style={{ textAlign:"left"}}  align="center">{row.cat}</TableCell>
-              <TableCell style={{ textAlign:"left"}}  align="center"><a href={row.url}>{row.url}</a></TableCell>
+          {props.API_DATA.map((row,index) => (
+           <>
+           <TableRow  key={row.name}>
+            <TableCell style={{ textAlign:"left", width:'5%'}} align="center">{index + 1}</TableCell> 
+              <TableCell style={{ textAlign:"left", width:'25%'}}   align="center">{row.bnd}</TableCell> 
+              <TableCell style={{ textAlign:"left", width:'5%'}}  align="center">{row.cnt}</TableCell>
+              <TableCell style={{ textAlign:"left", width:'20%'}}  align="center">{row.prt.map((e) => <span   key={e}><span style={{backgroundColor:"#FFD9B6", padding:"1px",display:"flex",width:"80px", border:"0.5px solid orange", margin: "10px 0px", borderRadius:"3px"}}>{e}</span></span>)}</TableCell>
+              <TableCell style={{ textAlign:"left", width:'20%'}}  align="center">{row.cat.map((e) =><span  key={e}><span style={{backgroundColor:"#F28808", padding:"1px", display:"flex",width:"50px", border:"0.5px solid orange", borderRadius:"3px", margin: "10px 0px"}}>{e}</span></span>)}</TableCell>
+              <TableCell style={{ textAlign:"left", width:'25%'}}  align="center"><a href={row.url}>{row.url}</a></TableCell>
             </TableRow>
+            <Waypoint onEnter={()=>limitHandler(index + 10)}/>
+          </>
           ))}
+          
         </TableBody>
 
         </>

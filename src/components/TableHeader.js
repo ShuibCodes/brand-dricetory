@@ -9,36 +9,69 @@ import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import TableContent from './TableContent'
 import MultiSelectFIlter from "./MultiSelectFIlter";
-import {FiFilter} from 'react-icons/fi'
-
-function TableHeader(props) {
-
-
-const headerFields = [
-  {field: 'ID', label: ''},
-{field: 'bnd', label: 'Brand'  } ,
-{field: 'cnt', label: 'Country', autoFilter: true } ,
-{field: 'prt', label: 'Product type', autoFilter: true } ,
-{field: 'cat', label: 'Category', autoFilter: true } ,
-{field: 'url', label: 'URL' } ,
-]
+import {AiFillFilter} from 'react-icons/ai'
+import {AiOutlineFilter} from 'react-icons/ai'
+import { makeStyles } from '@material-ui/core/styles';
+import '../App.css'
 
   
+const useStyles = makeStyles({
+  root:{
+   verticalAlign:"initial" ,
+  background:"#F28808",
+  padding:"16px",
+      
+  }
+})
 
+
+function TableHeader(props) {
+const classes = useStyles();
+
+// changing filter colour
+  const ChangeFilter = (props) =>{
+    console.log(props)
+      if(props.filters[props.field] === undefined){
+        return (null)
+      }
+      if(props.filters[props.field].length > 0 && props.autoFilter ){
+          return (<AiFillFilter style={{position:"relative", top:"3px", left: "4px"  }} onClick={() => props.toggleVisibleFilter(props.field)}/>)
+      } else if( props.filters[props.field].length === 0 && props.autoFilter){
+        return (<AiOutlineFilter  style={{position:"relative", top:"3px", left: "4px"  }} onClick={() => props.toggleVisibleFilter(props.field)}/>)
+      } else{
+        return (null)
+      }
+  }
+
+
+  const headerFields = [
+    {field: 'ID', label: '', width: '5%'},
+  {field: 'bnd', label: 'Brand', width: '25%'  } ,
+  {field: 'cnt', label: 'Country', autoFilter: true, width: '5%' } ,
+  {field: 'prt', label: 'Product type', autoFilter: true, width: '20%' } ,
+  {field: 'cat', label: 'Category', autoFilter: true, width: '20%' } ,
+  {field: 'url', label: 'URL', width: '25%' } ,
+  ]
 
     return (
         <>
-            <TableHead >
+          <div style={{width:"100%" , height:"85px"}} >         
           <TableRow>
 {headerFields.map((d)=>
-  <TableCell  style={{ textAlign:"left"}}  align="center">{d.label}
-  {d.autoFilter?<FiFilter style={{position:"relative", top:"4px", left: "4px"}} onClick={() => props.toggleVisibleFilter(d.field)}/>:<div/>}
-  {props.visibleFilter===d.field?<MultiSelectFIlter filterHandler={props.filterHandler}  API_DATA={props.API_DATA} visibleFilter={props.visibleFilter} setVisibleFilter={props.setVisibleFilter} setFilters={props.setFilters} filters={props.filters} />:(null)}
+  <TableCell 
+    classes={{
+      root:classes.root
+    }}
+   style={{ textAlign:"left",fontSize:"18px", position:"sticky", width:d.width, background:"#F28808"}}  align="left">{d.label}
+  
+    <ChangeFilter field={d.field} filters={props.filters}  autoFilter={d.autoFilter} toggleVisibleFilter={props.toggleVisibleFilter} />
+    {props.visibleFilter===d.field?<MultiSelectFIlter  filterHandler={props.filterHandler}  API_DATA={props.API_DATA} visibleFilter={props.visibleFilter} setVisibleFilter={props.setVisibleFilter} setFilters={props.setFilters} filters={props.filters} />:(null)}
     </TableCell>
 )}
 
           </TableRow>
-        </TableHead>
+           </div>
+     
         </>
     )
 }

@@ -12,14 +12,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
+
+
 function TextInput(props) {
     const classes = useStyles();
-  
+
+    console.log(props.filters)
+
+//useHistory here 
+
+
+
+
+
+
+
     return (
       <>
-    <form className={classes.root} noValidate autoComplete="off">
+    <form   action="/" method="get" className={classes.root} noValidate autoComplete="off">
    
-      <TextField onChange={(e)=>props.searchHandler(e.target.value)} value={props.filters.search}  id="outlined-basic" label={props.filters.search==''?'Search brand':''} variant="outlined" />
+      <TextField style={{width:"600px"}} onChange={(e)=>props.searchHandler(e.target.value)} value={props.filters.search}  id="outlined-basic" label={props.filters.search==''?'Search brand':''} variant="outlined" />
 
        
     </form>
@@ -30,3 +43,4 @@ function TextInput(props) {
 }
 
 export default TextInput
+

@@ -1,0 +1,32 @@
+/*spinner*/
+
+#spinner:not(.d-none){position:fixed; left:0; top:0; bottom: 0; right: 0; background-color:rgba(255, 255, 255, 0.8); z-index:99 }
+#spinner.d-none{z-index:-1}
+#spinner h2{display: inline-block; text-align:center}
+#spinner>div{position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  margin:0px;
+width:0px;
+}
+.rotate {
+  position: absolute;
+  animation: rotation 2s infinite linear;
+  height: 100px;
+  max-width: 300px;
+  top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin:0px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
